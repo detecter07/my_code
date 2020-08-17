@@ -17,6 +17,17 @@
 
 
         <div class="container">
+        {% if app.user %}
+        <a href="{{path('app_logout')}}">logout</a>
+        {% endif %}
+
+       {% if app.user %}
+
+       <div class="alert alert-success">welcome >
+        {{ app.user.name}}</div>
+       {% endif %}
+
+
         {% block body %}{% endblock %}
         </div>
 

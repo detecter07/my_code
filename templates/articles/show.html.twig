@@ -42,13 +42,13 @@
 {% block body %}
 <article class="my-article">
         <h2>{{article.title}}</h2>
-        
+
         {% if article.image %}
         <div class="img">
           <img src="{{ asset('uploads/' ~ article.image) }}">View brochure (PDF)</img>
         </div>
         {% endif %}
-        
+
         <p>
         {{article.content}}
         </p>
@@ -69,6 +69,9 @@
 <li>{{comment.comment}}</li>
 {% endfor %}
 </ul>
+
+{{form_comment}}
+
 </div>
 {% endblock %}
 
