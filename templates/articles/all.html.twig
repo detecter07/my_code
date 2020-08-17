@@ -1,0 +1,34 @@
+{% extends "layout.html.twig" %}
+
+
+{% block body %}
+
+  {% for msg in app.session.flashBag.get('success_article') %}
+      <div class="alert alert-success">
+         {{ msg }}
+      </div>
+{% endfor %}
+
+<div class="container">
+      {% for article in articles %}
+      <article class="my-article">
+        <h2><a href="{{path('article_view', {'id': article.id}) }}">{{ article.title}}</a></h2>
+        <div class="img">
+          <img src="{{article.image}}" alt="test">
+
+        </div>
+        <p>{{article.content}}}</p>
+          <div class="comment">
+            <span><i class="fas fa-book-open"></i>	{{ article.getCreatedAt|date("d.m.Y") }}</span>
+             <span><i class="fas fa-comment"></i>{{article.Comments|length }}</span>
+             <span><i class="fas fa-user"></i> {{article.getUsers}}</span>
+          </div>
+      </article>
+{% endfor %}
+
+<div class="centerify">
+    {{ knp_pagination_render( articles,
+  '@KnpPaginator/Pagination/twitter_bootstrap_v4_pagination.html.twig')}}
+</div>
+
+{% endblock %}

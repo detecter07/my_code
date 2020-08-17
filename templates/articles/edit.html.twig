@@ -1,0 +1,31 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Edit article!{% endblock %}
+
+{% block navigation %}
+    <a href="#" class="active">Home</a>
+    <a href="#">Articles</a>
+    <a href="#">Users</a>
+    <a href="#">Articles</a>
+    <a href="#">Users</a>
+{% endblock %}
+
+{% block body %}
+{{ form_start(articleForm) }}
+       {{ form_row(articleForm.title, {
+           label: 'Article title'
+       }) }}
+       {{ form_row(articleForm.author) }}
+       {{ form_row(articleForm.content) }}
+       {{ form_row(articleForm.publishedAt) }}
+       <button type="submit" class="btn btn-primary">Update!</button>
+   {{ form_end(articleForm) }}
+{% endblock %}
+
+{% block footer  %}
+{% endblock %}
+
+{% block javascripts %}
+<script src ="{{asset('js/all.min.js')}}">
+</script>
+{% endblock %}

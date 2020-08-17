@@ -1,0 +1,394 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 23px;
+    font-family: monospace;
+    color: #6d665c;
+    overflow-x: hidden;
+}
+
+p {
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    color: #25a1dd;
+}
+
+span {
+    color: #888;
+    font-size: 19px;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    background-color: #FFF;
+    color: #6d665c;
+    clear: both;
+    box-shadow: 0 3px 7px 1px rgba(0, 0, 0, .06);
+}
+
+header .logo img {
+    position: absolute;
+    top: -12px;
+    left: 10px;
+    float: left;
+    margin-left: 20px;
+    transform: translate(20px, 22px);
+    width: 68px;
+    height: 70px;
+}
+
+header nav {
+    float: left;
+    transform: translate(-60%, 85%);
+    margin-left: 43%;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #6d665c;
+    transition: color 0, 5s ease-in-out;
+}
+
+header nav a:hover,
+header nav a.active {
+    color: blue;
+}
+
+.brundcrumb {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    background: #efefee;
+}
+
+.brundcrumb .col {
+    position: absolute;
+    color: #FFF;
+    transform: translate(40px, 46%);
+    top: 0;
+}
+
+.brundcrumb .col:nth-child(2) {
+    position: absolute;
+    width: 19%;
+    left: 15%;
+}
+
+.brundcrumb .col h6 {
+    color: #d0c7c4;
+    text-transform: uppercase;
+}
+
+.brundcrumb .col h4 a {
+    color: #111;
+    opacity: 0.5;
+    font-size: 20px;
+}
+
+.brundcrumb .button {
+    float: right;
+    right: 1%;
+    top: 11%;
+    position: absolute;
+}
+
+.brundcrumb .button .btn-warning {
+    padding: 17px 9px;
+    width: 222px;
+    color: #FFF;
+    opacity: 0.9;
+    background-color: #f19066;
+    transition: color 0.7s ease;
+}
+
+.brundcrumb .button .btn-warning::before {
+    content: '';
+    height: 27px;
+    width: 0px;
+    position: absolute;
+    background-color: #fff;
+    padding-left: 1px;
+    top: 12px;
+    right: 60px;
+}
+
+.brundcrumb .button .btn-warning::after {
+    content: '\005E';
+    position: absolute;
+    font-size: 20px;
+    color: #FFF;
+    padding-left: 1px;
+    top: 10px;
+    right: 42px;
+    transform: rotateX(180deg);
+}
+
+.brundcrumb .button .btn-warning:hover {
+    opacity: 1;
+    background-color: #f19065;
+    cursor: pointer;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    padding: 10px 10px 0 15px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.container .my-article {
+    width: 80%;
+    margin: 20px auto;
+    padding: 10px 0 10px 10px;
+    box-shadow: 2px 4px 3px #999, 2px 4px 3px #999, 2px 4px 3px #999;
+}
+
+.container .my-article .comment {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.paginator {
+    width: 50%;
+    position: absolute;
+    transform: translateX(68%);
+    background-color: #fff;
+}
+
+.paginator a {
+    width: 31px;
+    display: inline-block;
+    padding: 2px 2px 2px 8px;
+    text-decoration: none;
+    color: #999;
+    margin-bottom: 20px;
+}
+
+.container .tabs {
+    display: inline-block;
+    position: relative;
+    margin-top: 78px;
+    width: 100%;
+    margin-bottom: 7%;
+}
+
+.container .tabs a {
+    display: inline-block;
+    color: grey;
+    text-decoration: none;
+}
+
+.container .tabs .tab-1 {
+    position: absolute;
+    float: left;
+    padding: 2px 12px;
+    left: 14%;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid #888;
+    border-left: 1px solid #888;
+    border-right: 1px solid #888;
+}
+
+.container .tabs .tab-2 {
+    position: absolute;
+    color: #000 !important;
+    background-color: #ebe9e6;
+    top: 2px;
+    padding: 2px 10px;
+    left: 45px;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid #888;
+    border-left: 1px solid #888;
+    border-right: 1px solid #888;
+    border-radius: 0 0 .25rem .25rem;
+}
+
+footer {
+    width: 100%;
+    color: #6d665c;
+    position: relative;
+    min-height: 60px;
+    overflow: hidden;
+}
+
+footer address {
+    float: left;
+    padding: 15px;
+    font-size: 15px;
+}
+
+.commentar {
+    margin: 10px auto;
+    margin: 14px 11%;
+    height: 100%;
+    background-color: #e6e4e0d1;
+    display: none;
+}
+
+.commentar .recomended {
+    padding-left: 8px;
+    font-size: 15px;
+    padding-right: 19px;
+    float: left;
+}
+
+.commentar .twitter {
+    padding-left: 8px;
+    font-size: 15px;
+    padding-right: 19px;
+    float: left;
+}
+
+.commentar .form-add form {
+    margin-left: 9%;
+    margin-top: 12px;
+    position: relative;
+}
+
+.commentar .form-add label {
+    font-size: 15px;
+}
+
+.commentar .form-add input[type="text"] {
+    display: block;
+    width: 62%;
+    height: 37px;
+    padding: 14px;
+    border-radius: 3px;
+    margin-left: 0px;
+}
+
+.commentar .form-add input[type="text"]:focus {
+    background-color: #69A4E2;
+    opacity: 0.7;
+}
+
+.valid {
+    background-color: #69A4E2;
+    opacity: 0.7;
+}
+
+.commentar .form-add checkbox {
+    width: 15px;
+}
+
+.commentar .recomended #heart {
+    color: orange;
+}
+
+.commentar .recomended #twitter {
+    color: blue;
+}
+
+.arrow {
+    position: absolute;
+    background: none;
+    float: right;
+    bottom: -5px;
+    right: 21px;
+    font-size: 24px;
+    color: #777;
+    transition: all 0.6s ease-in-out;
+}
+
+.arrow:hover {
+    color: #888;
+}
+
+.commentar .avatar {
+    border: 2px solid #999;
+    padding-top: 14px;
+    padding-bottom: 13px;
+    padding-left: 8px;
+}
+
+.commentar .avatar img {
+    border-radius: 50%;
+}
+
+.commentar .avatar textarea {
+    color: #888;
+    padding: 13px;
+    height: 52px;
+    overflow: hidden;
+    border: 2px solid #999;
+    width: 92%;
+}
+
+footer .nav {
+    display: block;
+    float: left;
+    margin-left: 10px;
+    margin-bottom: 30px;
+}
+
+footer .nav a {
+    display: block;
+    text-decoration: none;
+    color: #6d665c;
+    margin: 15px;
+}
+
+footer .sozial {
+    color: blue;
+    float: right;
+    font-size: 25px;
+}
+
+.clear-fix {
+    clear: both;
+}
+
+footer .copyright {
+    position: absolute;
+    left: 5%;
+    bottom: 10px;
+}
+
+
+/*framwork*/
+
+.mrg-l {
+    margin-left: 5px;
+}
+
+.btn {
+    width: 220px;
+    height: 45px;
+    background-color: #0074d9;
+    color: #fff;
+    transition: all 1s ease;
+}
+
+.btn:hover {
+    background-color: blue;
+    cursor: pointer;
+}
+
+.page-prev {
+    position: absolute;
+    left: 85px;
+}
+
+.page-next {
+    position: absolute;
+    right: 39px;
+    z-index: 9999;
+}
+
+.centerify {
+    position: absolute;
+    left: 39%;
+}
